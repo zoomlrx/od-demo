@@ -11,13 +11,14 @@ const mysql = require('mysql');
 const querystring = require('querystring');
 
 
-//连接池,接收一堆请求,每次保持几十个连接
-const db = mysql.createPool({host:'localhost',user:'root',password:'lrx142875.',database:'test'});
+//连接池,接收一堆请求,每次保持几十个连接,与数据库连接的相关信息
+const db = mysql.createPool({host:'localhost',user:'root',password:'123456',database:'test'});
 
+//配置服务器
 var server = express();
 
-
-server.listen(80);
+//配置本地端口
+server.listen(8080);
 
 
 //1.解析cookie
