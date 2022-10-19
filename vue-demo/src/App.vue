@@ -4,27 +4,27 @@
       <router-view></router-view>
     </transition>
     <!--方法1<input type="text" :value="msg" @input="updateMessage">-->
-    <div v-show="user.user_ID!=null">
+    <div v-show="user.user_ID != null">
       <mt-tabbar fixed class="whiteb">
         <mt-tab-item id="外卖">
-          <img slot="icon" src="./assets/img/logo.png">
+          <img slot="icon" src="./assets/img/logo.png" />
           <router-link to="/home">主页</router-link>
         </mt-tab-item>
         <mt-tab-item id="订单">
-          <img slot="icon" src="./assets/img/logo.png">
+          <img slot="icon" src="./assets/img/logo.png" />
           <router-link to="/food">美食</router-link>
         </mt-tab-item>
         <mt-tab-item id="发现">
-          <img slot="icon" src="./assets/img/logo.png">
+          <img slot="icon" src="./assets/img/logo.png" />
           <router-link to="/newslist">段子</router-link>
         </mt-tab-item>
         <mt-tab-item id="我的">
-          <img slot="icon" src="./assets/img/logo.png">
-            <router-link to="/mydetail">我</router-link>
+          <img slot="icon" src="./assets/img/logo.png" />
+          <router-link to="/mydetail">我</router-link>
         </mt-tab-item>
       </mt-tabbar>
     </div>
-    <!-- test222 -->
+    <!-- test33333 -->
   </div>
 </template>
 
@@ -75,36 +75,34 @@
 //      }
 //    }
 //  }
-export default{
-    computed:{
-        user: {
-            get () {
-                return this.$store.state.user
-            },
-            set (value) {
-                this.$store.commit('getuser', value);
-            }
-        }
-
+export default {
+  computed: {
+    user: {
+      get() {
+        return this.$store.state.user;
+      },
+      set(value) {
+        this.$store.commit("getuser", value);
+      },
     },
-}
+  },
+};
 </script>
 
 <style scoped>
-    .whiteb{
-        background:#fff;
-        border:1px solid black;
-    }
-  .fade-enter-active, .fade-leave-active {
-    transition: 0.1s all ease;
-    transform: translateX(-50px);
-    opacity: 0.3;
-
-
-  }
-  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-    transition: 0.1s transfrom ease;
-    transform: translateX(50px);
-    opacity: 0.1;
-  }
+.whiteb {
+  background: #fff;
+  border: 1px solid black;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: 0.1s all ease;
+  transform: translateX(-50px);
+  opacity: 0.3;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  transition: 0.1s transfrom ease;
+  transform: translateX(50px);
+  opacity: 0.1;
+}
 </style>
